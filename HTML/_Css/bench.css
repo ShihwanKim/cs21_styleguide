@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+.faq { background-color: #373839; padding: 140px 0; }
+.faq .header { font-size: 50px; color: #e8e7e7; text-align: center; text-transform: uppercase; font-family: HelveticaNeueThin; }
+.faq .line { width: 30px; background-color: #7f8081; margin: 25px auto 45px; }
+.faq .cate { text-align: center; font-family: Arial; margin-bottom: 80px; }
+.faq .cate a { color: #d73300; background-color: #434344; display: inline-block; padding: 14px 0; width: 20%; color: #e8e7e7; font-size: 14px; -webkit-transition: 0.2s; -moz-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; }
+.faq .cate a:hover,
+.faq .cate a.current { background-color: #bd3a00; }
+.faq .list li { margin-bottom: 2px; font-family: Arial; }
+.faq .list li.current .folder-title { background-color: #bd3a00; }
+.faq .list li.current .folder-title .index,
+.faq .list li.current .folder-title .icon { background-position: 0 100%; }
+.faq .list li .folder-title { height: 80px; line-height: 80px; background-color: #434344; color: #e8e7e7; text-indent: 154px; cursor: pointer; -webkit-transition: 0.2s; -moz-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; font-size: 14px; }
+.faq .list li .folder-title:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80); opacity: 0.8; }
+.faq .list li .folder-title .index { font-size: 20px; width: 41px; height: 41px; line-height: 41px; background: url(../images/bg-index.png) 0 0 no-repeat; text-align: center; position: absolute; top: 50%; left: 57px; margin: -20px 0 0; text-indent: 0; }
+.faq .list li .folder-title .title { display: block; margin-right: 105px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.faq .list li .folder-title .icon { width: 22px; height: 22px; background: url(../images/icon-folder.png) 0 0 no-repeat; position: absolute; top: 50%; right: 57px; margin-top: -11px; }
+.faq .list li .folder-cont { background-color: #4b4b4c; padding: 90px 90px 40px; }
+.faq .list li .folder-cont h2 { font-size: 18px; font-weight: normal; color: #e8e7e7; padding-bottom: 20px; }
+.faq .list li .folder-cont .cont { font-size: 14px; line-height: 1.6; color: #adadad; padding-bottom: 50px; }
+.faq .loadmore { padding-top: 60px; }
+.faq .loadmore a { background-color: #404040; font-size: 14px; text-transform: uppercase; display: block; padding: 20px 0; color: #cbcbcb; text-align: center; font-family: Arial; -webkit-transition: 0.2s; -moz-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; }
+.faq .loadmore a:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80); opacity: 0.8; }
+
+.problems { background-color: #373839; padding: 140px 0; }
+.problems .header { font-size: 50px; color: #e8e7e7; text-align: center; text-transform: uppercase; font-family: HelveticaNeueThin; }
+.problems .line { width: 30px; background-color: #7f8081; margin: 25px auto 45px; }
+.problems .cate { text-align: center; font-family: Arial; margin-bottom: 80px; }
+.problems .cate a { background-color: #434344; display: inline-block; padding: 14px 0; width: 20%; color: #e8e7e7; font-size: 14px; -webkit-transition: 0.2s; -moz-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; }
+.problems .cate a:hover,
+.problems .cate a.current { background-color: #bd3a00; }
+.problems .list li { margin-bottom: 2px; font-family: Arial; }
+.problems .list li.current .folder-title { background-color: #bd3a00; }
+.problems .list li.current .folder-title .index,
+.problems .list li.current .folder-title .icon { background-position: 0 100%; }
+.problems .list li .folder-title { height: 80px; line-height: 80px; background-color: #434344; color: #e8e7e7; text-indent: 154px; cursor: pointer; -webkit-transition: 0.2s; -moz-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; font-size: 14px; }
+.problems .list li .folder-title:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80); opacity: 0.8; }
+.problems .list li .folder-title .index { font-size: 20px; width: 41px; height: 41px; line-height: 41px; background: url(../images/bg-index.png) 0 0 no-repeat; text-align: center; position: absolute; top: 50%; left: 57px; margin: -20px 0 0; text-indent: 0; }
+.problems .list li .folder-title .title { display: block; margin-right: 105px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.problems .list li .folder-title .icon { width: 22px; height: 22px; background: url(../images/icon-folder.png) 0 0 no-repeat; position: absolute; top: 50%; right: 57px; margin-top: -11px; }
+.problems .list li .folder-cont { background-color: #4b4b4c; padding: 90px 90px 40px; }
+.problems .list li .folder-cont h2 { font-size: 18px; font-weight: normal; color: #e8e7e7; padding-bottom: 20px; }
+.problems .list li .folder-cont .cont { font-size: 14px; line-height: 1.6; color: #adadad; padding-bottom: 50px; }
+.problems .list li .folder-cont .cont a { color: #d73300; }
+.problems .loadmore { padding-top: 60px; }
+.problems .loadmore a { background-color: #404040; font-size: 14px; text-transform: uppercase; display: block; padding: 20px 0; color: #cbcbcb; text-align: center; font-family: Arial; -webkit-transition: 0.2s; -moz-transition: 0.2s; -ms-transition: 0.2s; transition: 0.2s; }
+.problems .loadmore a:hover { -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; filter: alpha(opacity=80); opacity: 0.8; }

@@ -1,0 +1,7 @@
+@charset "utf-8";
+
+#wrap {position:relative;width:100%;padding:50px 0;}
+#contents-wrap {width:750px;margin:0 auto;}
+#contents-wrap .cont-tit h2 {font-size:24px;color:#222;font-weight:bold;letter-spacing:-0.02em;padding-bottom:30px;}
+
+.topBt {display: none;position: fixed; right:50px; bottom: 50px;}

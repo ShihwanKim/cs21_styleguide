@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="../_Img/favicon.ico">
+	<link rel="apple-touch-icon" href="../_Img/favicon.png">
+
+	<title>센텀소프트</title>
+	
+	<!-- SyntaxHighlighter -->
+	<script type="text/javascript" src="_Js/plugin/shCore.js"></script>
+	<script type="text/javascript" src="_Js/plugin/shBrushJScript.js"></script>
+	<script type="text/javascript" src="_Js/plugin/shBrushCss.js"></script>
+	<script type="text/javascript" src="_Js/plugin/shBrushXml.js"></script>
+	<link rel="stylesheet" type="text/css" href="_Css/plugin/shCore.css">
+	<link rel="stylesheet" type="text/css" href="_Css/plugin/shThemeRDark.css">
+	
+	<!-- CS21 -->
+	<link rel="stylesheet" type="text/css" href="../_Css/common.css">
+	<link rel="stylesheet" type="text/css" href="../_Css/style.default.css">
+	<link rel="stylesheet" type="text/css" href="_Css/layout.css">
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = '_Js/plugin/clipboard.swf';
+		SyntaxHighlighter.defaults['gutter'] = false;
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+
+<div id="wrap">
+	<div id="contents-wrap">
+	
+	<h2 class="s-tit01">코드 작성 규칙</h2>
+	<h3 class="s-tit01">html 코드 작성 규칙</h3>
+	<ul class="c-list01">
+		<li>DTD는 html5를 선언한다
+			<pre class="brush: html">&lt;!doctype html&gt;</pre>
+		</li>
+		<li>소문자로 마크업한다</li>
+		<li>주석처리는
+			<pre class="brush: html"><!-- 주석의 사용 예 --></pre>
+		</li>
+		<li>싱글태그는 무조건 닫는 기준
+			<pre class="brush: html">&lt;img src=&quot;img.jpg&quot; alt=&quot;알트값&quot; /&gt;, &lt;br /&gt;</pre>
+		</li>
+		<li>id 및 class 네이밍의 단어 연결은 언더바(_)가 아닌 하이픈(-)으로 한다
+			<pre class="brush: html; ruler: true;">
+				<div id="header_wrap">...</div>	<!-- 언더바(_)는 사용 하지 않는다. -->
+				<div class="footer-wrap">...</div>
+			</pre>
+		</li>
+		<li>네이밍은 직관적으로 한다
+			<pre class="brush: html">
+				<div id="mcontent-wrap">...</div>	<!-- 메인 컨텐츠 영역일 경우 -->
+			</pre>
+		</li>
+		<li>속성값은 큰따옴표를 사용한다
+			<pre class="brush: html">
+				<div class="pad15t">...</div>	<!-- 작은 따옴표('')는 사용 하지 않는다. -->
+			</pre>
+		</li>
+		<li>스타일은 css파일에 선언하며 html 태그에 inline으로 스타일 주지 않는다
+			<pre class="brush: html">
+				<div style="color=#fff">...</div> <!-- inline 스타일은 사용 하지 않는다. -->
+			</pre>
+		</li>
+		<li>DTD가 html5인 경우 table 태그 사용시 summary 는 삭제한다 (summary 내용을 caption에 넣는다)</li>
+		<li>마크업 후 마크업오류 체크는 필수 (파이어폭스의 부가기능 - Html Validator)</li>
+		<li>의미있는 마크업을 한다</li>
+		<li>크로스브라우징 범위는 ie7~ie최신버전/파이어폭스/크롬
+			<pre class="brush: html">
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+				<!-- IE 브라우저에서 항상 최신 표준 모드로 렌더링 -->
+			</pre>
+		</li>
+	</ul>
+	
+	<hr class="section">
+	
+	<h3 class="s-tit01">접근성 작업 시 html 코드 작성 규칙</h3>
+	<h4 class="s-tit02">a태그</h4>
+	<p>title속성은 새창일 경우(target="_blank")에만 사용(스크립트로 띄우는 새창 팝업 포함)하고 title값은 새창열림 으로 통일한다 (국문외는 New window로 통일)</p>
+	<pre class="brush: html">
+		<a href="http://www.cs21.com" target="_blank" title="새창열림">센텀소프트 홈페이지 바로가기</a>
+		<a href="abc.hwp">파일 다운로드</a>
+		<a href="http://www.cs21.com" target="_blank" title="New window">homepage link</a>
+	</pre>
+	
+	<div class="sgap"></div>
+	
+	<h4 class="s-tit02">table태그</h4>
+	<p>DTD에 따라 사용되는 요소의 차이가 있다</p>
+	<ul class="c-list01">
+		<li>html5일 경우 : summary 필요없음, caption에 summary 내용 추가</li>
+		<li>html5 이외 : summary 필수(표의 간략한 설명), caption 필수 (표 요약)</li>
+		<li>tbody 의 td에 셀병합이 있는 경우 id와 headers로 매칭시킨다</li>
+	</ul>
+	<pre class="brush: html">
+		<!-- html5 -->
+		<table>
+			<caption>table 내용 요약</caption>
+		</table>
+		
+		<!-- html5 이하 버전 -->
+		<table summary="표의 간략한 설명">
+			<caption>table 내용 요약</caption>
+		</table>
+	</pre>
+	
+	<div class="sgap"></div>
+	
+	<h4 class="s-tit02">image태그의 alt 값</h4>
+	<p>이미지에 있는 텍스트 내용 그대로 alt값에 기재한다</p>
+	<ul class="c-list01">
+		<li>의미없는 배경이미지일 경우(텍스트가 없어야 함) 빈값으로 제공한다
+			<pre class="brush: html"><img src="bg.gif" alt="" /></pre>
+		</li>
+		<li>홈페이지 바로가기 아이콘이나 버튼을 이미지로 제공할 경우
+			<pre class="brush: html"><a href="http://cs21.com">센텀소프트<img src="ico_home.gif" alt="홈페이지 바로가기" /></a></pre>
+		</li>
+	</ul>
+	
+	<div class="sgap"></div>
+	
+	<h4 class="s-tit02">서식폼의 레이블</h4>
+	<p>(참고 : \work-pc\프로젝트\2014-프로젝트\2014_프로젝트\08월_부산항만공사_홈페이지 디자인 및 컨텐츠 전면 개편 용역\0500_퍼블관련\＃웹접근성\부산항만공사_웹접근성작업기준_프로그램팀.pptx)<br />input type=”text”와 select 는 label과 세트로 사용하며 label의 for값과 input/select의 id값을 동일하게 매칭시킨다</p>
+	<pre class="brush: html">
+		<!-- input 태그 단독일 경우 -->
+		<label for="search">검색어 입력</label><input type="text" id="search" />
+		
+		<!-- input 태그가 2개 이상 연속으로 올 경우 2번째 input 태그 부터는 label 제공안하고 title 속성으로 제공 -->
+		<label for="search">휴대폰번호 앞자리 입력</label>
+		<input type="text" id="search" /> - <input type="text" title="휴대폰 가운데자리 입력" /> - <input type="text" title="휴대폰 끝자리 입력" />
+	</pre>
+	
+	<div class="sgap"></div>
+	
+	<h4 class="s-tit02">iframe</h4>
+	<p>디버깅용 iframe(액션프레임) 은 title 속성값을 빈프레임으로 통일한다</p>
+	<pre class="brush: html">
+		<iframe src="abc.html" title="액션프레임"></iframe> -> <iframe src="abc.html" title="빈프레임"></iframe>
+	</pre>
+	
+	<div class="sgap"></div>
+	
+	<h4 class="s-tit02">네이버/다음 지도 api</h4>
+	<p>네이버는 접근성 제공이 미흡하여 다음지도를 사용 외국 서비스는 구글맵 적용<br />
+	캡쳐이미지로 제공하는 경우 alt값 (네이버 or 다음에서 제공하는 센텀소프트 약도) 기재하고 지도url 새창열림으로 링크걸어 제공한다<br />
+	<a href="http://lll.bsgangseo.go.kr/html/07/0706.php" target="_blank" title="새창열림" class="cw-btn"><span class="win">강서구평생학습센터 적용예시</span></a></p>
+	
+	<div class="sgap"></div>
+	
+	<h4 class="s-tit02">스크롤들어가는 컨텐츠</h4>
+	<p>div태그에 스크롤들어가는 컨텐츠 (회원약관) 에는 tabindex=”0”을 넣어준다.<br />
+	스크린리더의 포커스가 div에는 잡히지 않기 때문에 div안에 내용을 읽을 수 있도록 tabindex=”0”으로 스크린리더의 포커스를 잡아준다.</p>
+	<pre class="brush: html">
+		<div tabindex="0">약관 내용</div>
+	</pre>
+	
+	<div class="sgap"></div>
+	
+	<h4 class="s-tit02">스킵네비게이션</h4>
+	<p>2개 제공이 기본이고 최대 3개까지 제공가능하다</p>
+	<pre class="brush: html">
+		<div class="skipNavi">
+			<h1 class="blind">스킵네비게이션</h1>
+			<ul>
+				<li><a href="#contents" class="skipLink">본문바로가기</a></li>
+				<li><a href="#mainNavi" class="skipLink">주메뉴바로가기</a></li>
+			</ul>
+		</div>
+	</pre>
+	</div>
+
+<script src="../_Js/jquery-1.10.2.min.js"></script>
+<script src="_Js/common.js"></script>
+<!--[if lt IE 9]>
+<script src="../_Js/html5shiv.js"></script>
+<script src="../_Js/respond.min.js"></script>  
+<![endif]-->
+
+</div>
+</body>
+</html>

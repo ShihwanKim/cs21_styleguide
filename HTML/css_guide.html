@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="shortcut icon" href="../_Img/favicon.ico">
+	<link rel="apple-touch-icon" href="../_Img/favicon.png">
+
+	<title>센텀소프트</title>
+	
+	<!-- SyntaxHighlighter -->
+	<script type="text/javascript" src="_Js/plugin/shCore.js"></script>
+	<script type="text/javascript" src="_Js/plugin/shBrushJScript.js"></script>
+	<script type="text/javascript" src="_Js/plugin/shBrushCss.js"></script>
+	<script type="text/javascript" src="_Js/plugin/shBrushXml.js"></script>
+	<link rel="stylesheet" type="text/css" href="_Css/plugin/shCore.css">
+	<link rel="stylesheet" type="text/css" href="_Css/plugin/shThemeRDark.css">
+	
+	<!-- CS21 -->
+	<link rel="stylesheet" type="text/css" href="../_Css/common.css">
+	<link rel="stylesheet" type="text/css" href="../_Css/style.default.css">
+	<link rel="stylesheet" type="text/css" href="_Css/layout.css">
+	
+	<script type="text/javascript">
+		SyntaxHighlighter.config.clipboardSwf = '_Js/plugin/clipboard.swf';
+		SyntaxHighlighter.defaults['gutter'] = false;
+		SyntaxHighlighter.all()
+	</script>
+</head>
+<body>
+
+<div id="wrap">
+	<div id="contents-wrap">
+		<h2 class="s-tit01">css 가이드</h2>
+		<h3 class="s-tit01">css 작성 규칙</h3>
+		<ul class="c-list01">
+			<li>영문 소문자로만 작성한다.</li>
+			<li>들여쓰기를 하지 않는다.</li>
+			<li>불필요한 공백은 최소화 한다.</li>
+			<li>코드 그룹 사이에 빈 줄을 넣을 수 있으나 한줄을 넘지 않게 한다. (빈줄은 선택사항)</li>
+			<li>선택자와 속성, 속성값 사이에 줄바꿈을 하지 않는다. (한줄로 정의)</li>
+			<li>속성값 축약 (컬러 코드값, 위치값, 0단위)</li>
+			<li>큰따옴표를 사용한다.</li>
+		</ul>
+		
+		<div class="gap"></div>
+		
+		<h3 class="s-tit01">웹폰트 작성 규칙</h3>
+		<h4 class="s-tit02">google url 적용</h4>
+		<pre class="brush: css">@import url("//fonts.googleapis.com/earlyaccess/nanumgothic.css");</pre>
+		
+		<div class="sgap"></div>
+		
+		<h4 class="s-tit02">google url 적용</h4>
+		<pre class="brush: css">
+			@font-face {
+			font-family:’NanumGothic’;
+			src:url(‘/_Default/_Font/NanumGothic.eot’);
+			src:url(‘/_Default/_Font/NanumGothic.eot’) format(‘embedded-opentype’),
+				url(‘/_Default/_Font/NanumGothic.woff’) format(‘woff’);
+			font-weight:normal;
+			font-style:normal;
+			font-size:12px;
+			}
+		</pre>
+		<p>\Work-pc\센텀자료\3- 센텀디자인자료공유\마크업검수및파일정리_작업중\00_css\webfont.css 파일 참고</p>
+		
+		<div class="gap"></div>
+		
+		<h3 class="s-tit01">common.css</h3>
+		<ul class="c-list01">
+			<li>html5 태그 호환성 설정</li>
+			<li>태그별 margin, padding 초기화</li>
+			<li>font-family 설정</li>
+			<li>a태그 속성</li>
+			<li>form 태그 요소 기본설정</li>
+			<li>이미지 요소 기본설정</li>
+			<li>플로팅 설정</li>
+			<li>박스유형 설정</li>
+			<li>포지셔닝 설정</li>
+			<li>숨김처리 설정</li>
+			<li>공백 설정 (관리자용/컨텐츠용)</li>
+			<li>정렬 설정</li>
+			<li>들여쓰기 설정</li>
+			<li>폰트 색상 설정</li>
+			<li>폰트속성 설정</li>
+			<li>도움말 공통 설정</li>
+			<li>영문, 숫자 설정</li>
+			<li>회색 필터 처리 설정</li>
+			<li>패딩 및 마진 설정</li>
+			<li>가로사이즈 (px, %) 설정</li>
+			<li>에디터용 출력 소스 설정</li>
+			<li>\Work-pc\센텀자료\3- 센텀디자인자료공유\마크업검수및파일정리_작업중\00_css\common.css 파일 참고</li>
+		</ul>
+		
+		<div class="gap"></div>
+		
+		<h3 class="s-tit01">개별사이트 css</h3>
+		<ul class="c-list01">
+			<li>common.css<br />
+			css 파일 import (최상위 common.css, webfont.css, board.css, member.css, layout.css, main.css, content.css 등) 개별사이트 컨텐츠 공통 스타일 선언</li>
+			<li>layout.css<br />
+			개별 사이트 레이아웃 스타일 정의</li>
+			<li>main.css<br />
+			개별 사이트 메인스타일 정의 (공통되는 레이아웃 스타일 제외)</li>
+			<li>content.css<br />
+			페이지별 컨텐츠 스타일 정의</li>
+		</ul>
+		
+	</div>
+</div>
+
+<script src="../_Js/jquery-1.10.2.min.js"></script>
+<script src="_Js/common.js"></script>
+<!--[if lt IE 9]>
+<script src="../_Js/html5shiv.js"></script>
+<script src="../_Js/respond.min.js"></script>  
+<![endif]-->
+
+</body>
+</html>
